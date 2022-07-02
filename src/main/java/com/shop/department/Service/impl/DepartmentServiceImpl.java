@@ -23,6 +23,8 @@ public class DepartmentServiceImpl implements DepartmentService {
     @Override
     public Department findDepartmentById(Long id) {
         log.info("Inside DepartmentServiceImpl.findDepartmentById.. {}" , id);
-        return departmentRepository.getById(id);
+        Department department = departmentRepository.getById(id);
+        log.info("Department {}" , department);
+        return department;
     }
 }
